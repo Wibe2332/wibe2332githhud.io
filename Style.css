@@ -1,1 +1,75 @@
+/* Fondo con gradiente suave */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+}
+
+/* Tarjeta principal */
+.card {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  max-width: 500px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.card h1 {
+  margin-bottom: 1rem;
+}
+
+.card p {
+  margin: 0.5rem 0;
+}
+
+/* Botón estilizado */
+button {
+  background-color: #ff6f61;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background-color: #ff3d3d;
+  transform: scale(1.05);
+}
+
+/* Texto oculto con transición */
+#extra {
+  margin-top: 1rem;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#extra.mostrar {
+  display: block;
+  opacity: 1;
+}
+
+/* Animación al aparecer */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
